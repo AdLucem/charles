@@ -110,20 +110,37 @@
             </div>
           </script>
 
+          <!-- div for SELECT DOCUMENT button -->
+          <!--  controller: navigation.js  -->
           <div style="margin: 15px auto 5px;" ng-controller="navigationController">
             <center>
               <div style="margin-bottom:40px">
-                <button type="button" class="btn btn-default btn-lg" ng-click="selectDoc()"><strong>Select Document</strong></button>
+                  <button type="button" class="btn btn-default btn-lg" ng-click="selectDoc()">
+                      <strong>
+                          Select Document
+                      </strong>
+                  </button>
               </div>
 
+              <!-- div for PREV button -->
               <button type="button" class="btn btn-default btn-lg" ng-click="previousDoc()" ng-disabled="docIndex <= 0">
-                <span class="glyphicon glyphicon-arrow-left"></span> &nbsp; Prev
+                <span class="glyphicon glyphicon-arrow-left">    
+                </span>
+                &nbsp; Prev
               </button>
+
+              <!-- DOCUMENT, PASSAGE ID -->
               <p style="display: inline;margin: 0 30px;padding-top: 10px;font-size:20px;font-weight:bold;">{{docData.name}}</p>
+
+              <!-- div for NEXT button -->
               <button type="button" class="btn btn-default btn-lg" ng-click="nextDoc()" ng-disabled="docIndex >= docNameIndexData.length - 1">
-                Next &nbsp; <span class="glyphicon glyphicon-arrow-right"></span>
+                  Next &nbsp;
+                  <span class="glyphicon glyphicon-arrow-right">
+                  </span>
               </button>
+              
             </center>
+            
           </div>
 
           <style type="text/css">
